@@ -1,0 +1,226 @@
+:root {
+  --main-bg-color: #f8f8f8;
+  --golden-color: #ffd700;
+  --border-color: #e0e0e0;
+  --blue-hover-color: #007bff;
+}
+
+.matbangcontent {
+  .matbang-section {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+  }
+
+  .matbang-main-title {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: rgb(238, 158, 10);
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    &::before,
+    &::after {
+      content: "";
+      flex: 1 1;
+      max-width: 475px;
+      height: 1px;
+      background-color: rgb(28, 28, 28);
+      opacity: 0.1;
+    }
+  }
+
+  .matbang-tabs-nav {
+    display: flex;
+    justify-content: start;
+    gap: 30px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    font-size: small;
+    transform: scale(0.96);
+  }
+
+  .tab-item {
+    color: rgba(17, 17, 17, 0.85);
+    font-size: 1.1em;
+    font-weight: bold;
+    padding-bottom: 8px;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s ease;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 3px;
+      background-color: var(--blue-hover-color);
+      transition: width 0.3s ease;
+    }
+
+    &:hover {
+      color: var(--blue-hover-color);
+
+      &::after {
+        width: 100%;
+      }
+    }
+
+    &.active {
+      color: var(--blue-hover-color);
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+
+  .matbang-content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    flex-wrap: wrap;
+  }
+
+  .matbang-center-image {
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .matbang-image-display {
+    width: 100%;
+    height: auto;
+    max-height: 800px;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .matbang-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .matbang-modal-content {
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 90%;
+    max-height: 90%;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .matbang-modal-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #aaa;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: #333;
+    }
+  }
+
+  .matbang-modal-image {
+    max-width: 100%;
+    max-height: 80vh;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+  }
+
+  @media (max-width: 767px) {
+    .matbang-section {
+      padding: 20px 10px;
+    }
+
+    .matbang-main-title {
+      font-size: 1.8em;
+      gap: 10px;
+      &::before,
+      &::after {
+        max-width: 150px;
+      }
+    }
+
+    .matbang-tabs-nav {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.9em;
+    }
+
+    .tab-item {
+      padding-bottom: 5px;
+      font-size: 1em;
+    }
+
+    .matbang-image-display {
+      height: 400px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .matbang-main-title {
+      font-size: 1.5em;
+      gap: 5px;
+      &::before,
+      &::after {
+        max-width: 80px;
+      }
+    }
+
+    .matbang-tabs-nav {
+      font-size: 0.8em;
+      gap: 8px;
+    }
+
+    .tab-item {
+      font-size: 0.9em;
+    }
+
+    .matbang-image-display {
+      height: 300px;
+    }
+  }
+}

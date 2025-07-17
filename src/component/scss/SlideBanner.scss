@@ -1,0 +1,95 @@
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 33.3333vw;
+  max-width: 290px;
+  height: 100vh;
+  background: white;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  padding: 30px 20px;
+  transition: left 0.3s ease;
+
+  &.open {
+    left: 0;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      color: rgba(102, 102, 102, 0.85);
+      padding: 12px 0;
+      border-bottom: 1px solid #eee;
+      cursor: pointer;
+      font-weight: 400;
+      font-size: 14px;
+
+      &:hover {
+        background-color: #f9f9f9;
+      }
+    }
+  }
+}
+
+/* ✅ RESPONSIVE cho .side-menu */
+@media (max-width: 767px) {
+  .side-menu {
+    width: 85vw;
+    max-width: none;
+    padding: 20px 16px;
+
+    ul li {
+      font-size: 15px;
+      padding: 14px 0;
+    }
+  }
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 998;
+  transition: opacity 0.3s ease;
+}
+
+/* ✅ Đảm bảo menu-close không bị lệch */
+.menu-close {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 26px;
+  cursor: pointer;
+  z-index: 1001;
+
+  i {
+    color: #99a3a777;
+    background-color: white;
+    padding: 5px;
+    border-radius: 4px;
+  }
+
+  &:hover i {
+    color: red;
+  }
+}
+
+/* ✅ Responsive cho nút close */
+@media (max-width: 767px) {
+  .menu-close {
+    top: 16px;
+    right: 16px;
+    font-size: 22px;
+
+    i {
+      padding: 4px;
+    }
+  }
+}

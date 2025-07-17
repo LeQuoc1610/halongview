@@ -1,0 +1,234 @@
+.news-slider-container {
+  padding: 2rem 1rem;
+  max-width: 1188px;
+  margin: 0 auto;
+  font-family: "Quicksand", sans-serif;
+  box-sizing: border-box;
+
+  .title-wrapper {
+    text-align: center;
+    position: relative;
+    margin-bottom: 2rem;
+  }
+
+  .title {
+    display: inline-block;
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(238, 158, 10);
+    padding: 0 1rem;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 460px;
+      height: 2px;
+      background-color: #ccc;
+    }
+
+    &::before {
+      right: 100%;
+      margin-right: 20px;
+    }
+
+    &::after {
+      left: 100%;
+      margin-left: 20px;
+    }
+  }
+
+  .news-card {
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    max-width: 360px;
+    margin: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .news-image {
+      height: 50%;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .news-content {
+      height: 50%;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      h3 {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+      }
+
+      .date {
+        font-size: 0.75rem;
+        color: gray;
+        margin-bottom: 0.5rem;
+      }
+
+      .desc {
+        font-size: 0.875rem;
+        color: #333;
+        flex-grow: 1;
+        margin-bottom: 0.5rem;
+      }
+
+      a {
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: #1e3a8a;
+        text-decoration: none;
+        border-bottom: 1px solid #1e3a8a;
+        width: fit-content;
+
+        &:hover {
+          color: #2563eb;
+          border-color: #2563eb;
+        }
+      }
+    }
+  }
+
+  .slick-slide {
+    padding: 0 8px;
+    cursor: pointer;
+  }
+
+  .slick-track {
+    display: flex !important;
+  }
+
+  .slick-slide > div {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .testimonial-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    max-width: 1180px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 16px;
+    align-items: center;
+    margin: 0 auto;
+
+    .slider-section {
+      background-color: #161f2a;
+      height: 250px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      max-width: 1043px;
+      width: 100%;
+      padding: 40px 100px;
+      box-sizing: border-box;
+
+      .slick-slider {
+        width: 100%;
+      }
+
+      .testimonial-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .testimonial-content {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        flex-wrap: nowrap;
+        color: #ffffff;
+        width: 100%;
+        justify-content: center;
+      }
+
+      .avatar {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #f37c3b;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+      }
+
+      .text-block {
+        max-width: 700px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .stars {
+          color: #f37c3b;
+          font-size: 24px; 
+          margin-bottom: 8px;
+        }
+
+        .comment {
+          font-style: italic;
+          font-size: 18px; 
+          line-height: 1.6;
+          margin-bottom: 12px; 
+        }
+
+        .author {
+          font-size: 16px; 
+          font-weight: 500;
+        }
+      }
+    }
+
+    .cta-section {
+      background-color: #2a2a2a;
+      padding: 20px;
+      max-width: 1043px; 
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      box-sizing: border-box; 
+      .cta-text {
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 18px; 
+        margin-bottom: 0; 
+        flex-grow: 1; 
+        text-align: center; 
+      }
+
+      .cta-button {
+        background-color: white;
+        color: black;
+        padding: 12px 25px; 
+        font-weight: bold;
+        border-radius: 25px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        min-width: 120px;
+        &:hover {
+          background-color: #e2e2e2;
+        }
+      }
+    }
+  }
+}

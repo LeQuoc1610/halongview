@@ -1,0 +1,17 @@
+.bottom-wrapper {
+  background-color: #1a1a1a;
+  padding: 10px 0 15px;
+  text-align: center;
+
+  .copyright {
+    color: #e5e7eb;
+    font-size: 0.9rem;
+    font-weight: 400;
+    font-family: "Quicksand", sans-serif;
+
+    .highlight {
+      color: white;
+      font-weight: 600;
+    }
+  }
+}

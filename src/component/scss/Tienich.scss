@@ -1,0 +1,162 @@
+.tienich-section {
+  background-color: #9c8354;
+  padding: 60px 20px;
+  font-family: Arial, sans-serif;
+
+  .header-content {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    .tienich-header{
+      position: relative;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      box-sizing: border-box;      
+
+      b{
+        min-width: 423px;
+        display: block;
+        flex: 1;
+        height: 2px;
+        background-color:rgb(28, 28, 28);
+        opacity: 0.5;
+      }
+    }
+
+    .tienich-title {
+      color: #f89e0f;
+      font-size: 2.4rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-bottom: 40px;
+      white-space: nowrap;
+      text-align: center;
+      
+    }
+  }
+
+  .tienich-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 1182px;
+    margin: 0 auto;
+
+    .slider {
+      flex: 1;
+      max-width: unset;
+      width: 72%;
+
+      .tienich-slider {
+        z-index: 10;
+        .slick-prev,
+        .slick-next {
+            display: none !important;
+            }
+        .slide1 {
+          background: url("../img2/nghiduong.jpg");
+        }
+        .slide2 {
+          background: url("../img2/nhahang.jpg");
+        }
+        .slide3 {
+          background: url("../img2/beboi.jpg");
+        }
+        .slide-item {
+          width: 100%;
+          height: auto;
+          aspect-ratio: 16/9;
+          background-size: cover;
+          background-position: center;
+        }
+      }
+    }
+
+    .tienichlist {
+      flex: 1;
+      color: white;
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          font-family: monospace;
+          font-size: 1.2rem;
+          margin-bottom: 12px;
+          position: relative;
+          padding-left: 20px;
+
+          &::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: white;
+          }
+        }
+      }
+
+      .tienich-detail {
+        margin-top: 20px;
+        font-style: italic;
+        font-weight: 600;
+
+        span {
+          color: white;
+        }
+
+        em {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  
+  @media (max-width: 1024px) {
+    .tienich-content {
+      flex-direction: column;
+      align-items: center;
+
+      .slider {
+        max-width: 100%;
+      }
+
+      .tienichlist {
+        text-align: center;
+
+        ul li {
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .tienich-title {
+      font-size: 1.7rem;
+    }
+
+    .tienich-content {
+      gap: 20px;
+
+      .slider .slide-item {
+        height: 250px;
+      }
+
+      .tienichlist ul li {
+        font-size: 1rem;
+      }
+
+      .tienich-detail {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,143 @@
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 132, 255, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 12px rgba(0, 132, 255, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 132, 255, 0);
+    }
+}
+
+.download-fixed {
+    position: fixed;
+    bottom  : 0;
+    right   : 0;
+    z-index : 999;
+
+    .download-button {
+        background-color: #3498db;
+        color           : #fff;
+        font-size       : 16px;
+        padding         : 12px 16px;
+        border-radius   : 0;
+        white-space     : nowrap;
+        display         : flex;
+        align-items     : center;
+        border          : none;
+        outline         : none;
+        cursor          : pointer;
+        box-shadow      : none;
+        transition      : background-color 0.3s ease;
+        width           : 300px;
+
+        i {
+            margin-right: 8px;
+            font-size   : 18px;
+            font-weight : bold;
+        }
+
+        .tooltip {
+            font-size: 0.95rem;
+        }
+
+        &:hover {
+            background-color: #2f89c5;
+        }
+    }
+}
+
+.popup-overlay {
+    position       : fixed;
+    top            : 0;
+    left           : 0;
+    right          : 0;
+    bottom         : 0;
+    background     : rgba(0, 0, 0, 0.6);
+    z-index        : 9999;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+}
+
+.popup-form {
+    background: #00e3ff61;
+    padding   : 30px 25px;
+    width     : 400px;
+    max-width : 90%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    position  : relative;
+    animation : fadeInUp 0.4s ease;
+    text-align: center;
+
+    h2 {
+        margin-bottom: 10px;
+        color        : #ffffff;
+    }
+
+    p {
+        margin-bottom: 20px;
+        font-size    : 0.95rem;
+        color        : #ffffff;
+    }
+
+    form {
+        display       : flex;
+        flex-direction: column;
+        gap           : 12px;
+
+        input {
+            padding  : 10px;
+            font-size: 0.9rem;
+        }
+
+        .submit-btn {
+            background : #3498db;
+            color      : #ffffff;
+            font-weight: bold;
+            padding    : 10px;
+            border     : none;
+            cursor     : pointer;
+
+            &:hover {
+                background: #2f89c5;
+            }
+        }
+    }
+
+    .support-text {
+        margin-top: 15px;
+        font-size : 0.85rem;
+        color     : #ffffff;
+    }
+
+    .close-btn {
+        position  : absolute;
+        top       : 8px;
+        right     : 12px;
+        font-size : 24px;
+        background: none;
+        border    : none;
+        color     : #999;
+        cursor    : pointer;
+
+        &:hover {
+            color: #ffffff;
+        }
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity  : 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity  : 1;
+        transform: translateY(0);
+    }
+}

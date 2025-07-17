@@ -1,0 +1,56 @@
+.halong-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 100px;
+  background-color: white;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-top: 33px;
+}
+
+.halong-left,
+.halong-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.halong-left {
+  .halong-title {
+    color: #f5a623;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+  }
+
+  .halong-desc {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+    text-align: justify;
+    font-family: "Quicksand", sans-serif;
+  }
+
+  .halong-link {
+    margin-top: 15px;
+    font-style: italic;
+    color: #003366;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}
+
+.halong-right {
+  background: url('../image/hạ-long-bay-view-fix.jpg') no-repeat center center;
+  background-size: cover;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+

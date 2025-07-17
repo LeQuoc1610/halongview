@@ -1,0 +1,101 @@
+.contact-section {
+  position: relative;
+  background: url("../img2/ha-long-bay-view-phoi-canh-du-an-banner-1920x960.jpg") center center / cover no-repeat;
+  padding: 100px 20px;
+  text-align: center;
+  color: #fff;
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+
+  .contact-content {
+    position: relative;
+    z-index: 2;
+    max-width: 513px;
+    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+
+    .contact-btn-icon{
+         border: 1px solid rgb(238, 158, 10);;
+         border-radius: 100%;
+         width: 80px;
+         height: 80px;
+         display: flex;
+         justify-content: center;
+         margin-bottom: 20px;
+         border-width: 4px;
+         margin-left: auto;
+         margin-right: auto;
+         align-items: baseline;
+         transition: background-color 0.3s ease;
+
+         &:hover{
+            background-color:  rgb(238, 158, 10);
+         }
+            .contact-icon {
+                cursor: pointer;
+                border-width: 2px solid  rgb(238, 158, 10);
+                i{
+                    font-size: 45px;
+                    margin-top: 15px;
+                }
+    }
+    }
+
+    .contact-title {
+      color: rgb(238, 158, 10);
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      input {
+        padding: 12px 15px;
+        font-size: 16px;
+        border: 1px solid #fff;
+        background: transparent;
+        color: #fff;
+        font-style: oblique;
+
+
+        &::placeholder {
+          color: rgb(238, 158, 10) ;
+        }
+
+        &:focus {
+          outline: none;
+          border-color: #f8a900;
+        }
+      }
+      .btn-submit{
+         .submit-btn {
+        padding: 12px;
+        background-color:rgb(238, 158, 10);
+        border: none;
+        width: 50%;
+        font-weight: bold;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: rgb(238, 158, 10);
+        }
+      }
+      }
+    }
+  }
+}

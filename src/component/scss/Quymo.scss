@@ -1,0 +1,86 @@
+.quymo-container {
+  width: 100%;
+  background-color: #5D4A36;
+  color: #fff;
+  padding: 60px 0;
+
+  .quymo-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+}
+
+.quymo-left,
+.quymo-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.quymo-left {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  min-height: 400px;
+  background: url(../image/Hạ-Long-Bay-View-fix-3.jpg) no-repeat center center;
+  background-size: cover;
+
+  .quymo-view-more-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-decoration: underline;
+    }
+  }
+}
+
+.quymo-right {
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+
+  .quymo-title {
+    font-size: 2em;
+    font-weight: bold;
+    color: #FFD700;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid rgb(0 0 0 / 28%);
+    display: inline-block;
+  }
+
+  .quymo-details-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      font-size: 1.05em;
+      line-height: 1.8;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: flex-start;
+
+      .bullet {
+        color: #FFD700;
+        margin-right: 10px;
+        font-weight: bold;
+      }
+    }
+  }
+}
