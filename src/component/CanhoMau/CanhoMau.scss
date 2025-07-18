@@ -8,7 +8,7 @@
 
   .canho-main-title {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
     color: rgb(238, 158, 10);
     text-transform: uppercase;
@@ -109,8 +109,6 @@
     margin: 0 auto;
     object-fit: contain;
   }
-
-  // ===== Responsive =====
 
   @media (max-width: 1024px) {
     .canho-main-title {

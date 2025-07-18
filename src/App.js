@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Banner from './component/Banner/Banner';
 import Slickimg from './component/slickimg/Slickimg';
 import Halongone from './component/Halongone/Halongone';

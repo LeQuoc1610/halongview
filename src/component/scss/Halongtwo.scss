@@ -1,83 +1,56 @@
 .halongcontent {
-  width: 100%;
   background-color: #5D4A36;
   color: #fff;
-  padding: 50px 0;
 
   .halongcontent-inner {
     max-width: 1240px;
-    margin: 0 auto;
-    padding: 0 5vw; 
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    align-items: center;
-    justify-content: center;
   }
 
-  .halongcontent-left,
-  .halongcontent-right {
-    flex: 1 1 320px; 
-    box-sizing: border-box;
-  }
-
-  .img {
+  .bg-img {
     width: 100%;
-    max-width: 600px;
-    height: auto;
-    aspect-ratio: 3 / 2; 
+    aspect-ratio: 3 / 2;
     background: url('../image/vi-tri-ha-long.jpg') no-repeat center center;
     background-size: cover;
-    margin: 0 auto;
   }
 
-  .halongcontent-right {
-    .section-title {
-      span {
-        text-align: justify;
-        display: inline-block;
-        margin-right: 1em;
-        padding-bottom: 0.5em;
-        border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-        margin-bottom: 1em;
-        text-transform: uppercase;
-        font-size: 1.4em;
-        color: rgb(238, 158, 10);
-      }
-    }
-
-    .section-description {
-      font-size: 1em;
-      line-height: 1.7;
-      margin-bottom: 1.5em;
-      text-align: justify;
-      text-align: justify;
-      opacity: 0.95;
-      max-width: 100%;
-    }
-
-    .detail-link {
-      color: #FFF;
-      text-decoration: none;
-      font-weight: bold;
-      margin-top: 1em;
-      font-size: 1.1em;
+  .section-title {
+    span {
       display: inline-block;
-      transition: color 0.3s ease;
-
-      &:hover {
-        text-decoration: underline;
-        color: #FFD700;
-      }
+      text-transform: uppercase;
+      font-size: 1.4rem;
+      color: rgb(238, 158, 10);
+      margin-bottom: 0.5rem;
     }
+  }
 
-    .click-to-enlarge-right {
-      font-size: 0.9em;
-      text-align: left;
-      opacity: 0.8;
-      margin-top: 1em;
-      color: #FFF;
-      cursor: pointer;
+  .section-description {
+    font-size: 1rem;
+    line-height: 1.7;
+    text-align: justify;
+    margin-bottom: 1.5rem;
+    opacity: 0.95;
+  }
+
+  .detail-link {
+    display: inline-block;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-decoration: none;
+    margin-top: 1em;
+    transition: color 0.3s ease;
+
+    &:hover {
+      text-decoration: underline;
+      color: #FFD700;
     }
+  }
+
+  .click-to-enlarge-right {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-top: 1em;
+    color: #FFF;
+    cursor: pointer;
   }
 }

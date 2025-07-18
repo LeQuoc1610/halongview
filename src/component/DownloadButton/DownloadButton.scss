@@ -59,29 +59,35 @@
     background     : rgba(0, 0, 0, 0.6);
     z-index        : 9999;
     display        : flex;
-    justify-content: center;
-    align-items    : center;
+    justify-content: flex-end;
+    align-items    : flex-end;
 }
 
 .popup-form {
-    background: #00e3ff61;
-    padding   : 30px 25px;
-    width     : 400px;
-    max-width : 90%;
+    background: #2f89c5;
+    padding: 30px 25px;
+    width: 300px;
+    max-width: 100%;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    position  : relative;
-    animation : fadeInUp 0.4s ease;
+    position: relative;
+    animation: fadeInUp 0.4s ease;
     text-align: center;
+    max-height: 100%;
+    height: 445px;
+    font-size: smaller;
+    
+    
 
     h2 {
-        margin-bottom: 10px;
-        color        : #ffffff;
+            margin-bottom: 10px;
+            color: #ffffff;
+            font-size: larger;
     }
 
     p {
         margin-bottom: 20px;
-        font-size    : 0.95rem;
-        color        : #ffffff;
+        font-size: smaller;
+        color: #ffffff;
     }
 
     form {

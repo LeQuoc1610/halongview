@@ -1,4 +1,5 @@
 .tienich-section {
+  font-size: clamp(1rem, 1.5vw, 1.4rem);
   background-color: #9c8354;
   padding: 60px 20px;
   font-family: Arial, sans-serif;
@@ -17,22 +18,22 @@
       gap: 20px;
       box-sizing: border-box;      
 
-      b{
+      .line{
         min-width: 423px;
         display: block;
         flex: 1;
-        height: 2px;
+        height: 1.5px;
         background-color:rgb(28, 28, 28);
-        opacity: 0.5;
+        opacity: 0.2;
       }
     }
 
     .tienich-title {
+
       color: #f89e0f;
-      font-size: 2.4rem;
+      font-size: 2rem;
       text-transform: uppercase;
       font-weight: bold;
-      margin-bottom: 40px;
       white-space: nowrap;
       text-align: center;
       
@@ -44,9 +45,9 @@
     justify-content: center;
     align-items: flex-start;
     gap: 40px;
-    max-width: 1182px;
+    max-width: 90vw;
     margin: 0 auto;
-
+    margin-top: 2rem;
     .slider {
       flex: 1;
       max-width: unset;
@@ -88,7 +89,7 @@
 
         li {
           font-family: monospace;
-          font-size: 1.2rem;
+          font-size: clamp(1rem, 1.5vw, 1.2rem);
           margin-bottom: 12px;
           position: relative;
           padding-left: 20px;
@@ -117,11 +118,14 @@
       }
     }
   }
-
-  
+  @media (min-width: 1400px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 79rem;
+    }
+}
+ 
   @media (max-width: 1024px) {
     .tienich-content {
-      flex-direction: column;
       align-items: center;
 
       .slider {

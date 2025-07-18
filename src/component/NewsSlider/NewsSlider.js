@@ -1,7 +1,9 @@
 import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation} from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import "../styles/NewsSlider.scss";
 
 const newsData = [
@@ -56,41 +58,38 @@ const newsData = [
 ];
 
 export default function NewsSlider() {
-  const settings = {
-    dots: false,
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    arrows: true,
-    autoplaySpeed: 4000,
-    speed: 500,
-    cssEase:"ease-in-out",
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: { slidesToShow: 2 },
-      },
-      {
-        breakpoint: 768,
-        settings: { slidesToShow: 1 },
-      },
-    ],
-  };
-
   return (
     <div className="news-slider-container">
       <div className="title-wrapper">
-        <h2 className="title">TIN TỨC TỪ CHỦ ĐẦU TƯ</h2>
+        <b className="line" />
+        <span className="title">TIN TỨC TỪ CHỦ ĐẦU TƯ</span>
+        <b className="line" />
       </div>
 
-      <Slider {...settings}>
+      <Swiper
+        modules={[Navigation]}
+        loop={true}       
+        spaceBetween={24}
+        pagination={{ clickable: true }}
+        breakpoints={{
+          0: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        }}
+      >
         {newsData.map((item, index) => (
-          <div key={index}>
+          <SwiperSlide key={index}>
             <div className="news-card">
               <div
                 className="news-image"
                 style={{ backgroundImage: `url(${item.image})` }}
-              ></div>
+              />
               <div className="news-content">
                 <h3>{item.title}</h3>
                 <p className="date">{item.date}</p>
@@ -98,11 +97,9 @@ export default function NewsSlider() {
                 <a href="#">XEM THÊM</a>
               </div>
             </div>
-          </div>
+          </SwiperSlide>
         ))}
-      </Slider>
-
+      </Swiper>
     </div>
-    
   );
 }
