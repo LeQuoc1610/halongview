@@ -107,11 +107,14 @@
   max-width: 72rem;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
   width: 100%;
+  display: flex;
+  justify-content: space-around;
 
   .cta-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 8rem;
 
     .cta-text {
       color: #f1f1f1;

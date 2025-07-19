@@ -101,7 +101,7 @@
         }
 
         .submit-btn {
-            background : #3498db;
+            background :  #0ba308;
             color      : #ffffff;
             font-weight: bold;
             padding    : 10px;
@@ -109,7 +109,7 @@
             cursor     : pointer;
 
             &:hover {
-                background: #2f89c5;
+                background: rgba(211, 140, 8, 0.849);
             }
         }
     }
@@ -127,7 +127,7 @@
         font-size : 24px;
         background: none;
         border    : none;
-        color     : #999;
+        color     : #999999d3;
         cursor    : pointer;
 
         &:hover {
