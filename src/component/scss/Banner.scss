@@ -1,158 +1,124 @@
-.banner-container {
+.banner {
+  position        : fixed;
+  top             : 0;
+  left            : 0;
+  width           : 100%;
+  z-index         : 1000;
   background-color: white;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  width: 100%;
-  height: 5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 2rem;
+  box-shadow      : 0 2px 5px rgba(0, 0, 0, 0.05);
 
-  .banner-left {
-    display: flex;
-    justify-content: flex-end;
-    width: 18rem;
-    .menu-icon-circle {
-      width: 2.5rem;
-      height: 2.5rem;
-      border: 1px solid #ccc;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.3s;
-      cursor: pointer;
+  .banner-container {
+    max-width      : 68rem;
+    margin         : 0 auto;
+    height         : 5rem;
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+    padding        : 0 2rem;
 
-      i {
-        color: #999;
-        font-size: 1rem;
-      }
-
-      &:hover {
-        background-color: #f5f5f5;
-        border-color: #aaa;
-      }
+    .banner-group {
+      display        : flex;
+      align-items    : center;
+      justify-content: space-between;
+      width          : 100%;
     }
   }
 
-  .banner-center {
-    background: url('../image/mono.png') no-repeat center center;
-    background-size: contain;
-    height: 4rem;
-    width: 15rem;
-    cursor: pointer;
-  }
-
-  .banner-right {
-    align-items: center;
-    cursor: pointer;
-    width: 22rem;
+  .bentrai {
+    width: 12.1875rem;
     display: flex;
     justify-content: flex-start;
-    .right{
-      display: flex;
-      gap: 1rem;
-        i {
-      color: rgb(218, 144, 5);
-      font-size: 1rem;
-    }
-
-    p {
-      color: #7d7d7d;
-      margin: 0;
-      font-weight: 500;
-      font-size: 1rem;
-    }
-
-    }
-
-  }
-}
-
-@media (max-width: 1023px) {
-  .banner-container {
-    height:3rem ;
-    padding: 0 1.3rem;
-
     .banner-left {
-      width: 20%;
       .menu-icon-circle {
-        width: 2rem;
-        height: 2rem;
+        width           : 2rem;
+        height          : 2rem;
+        background-color: #fff;
+        border          : 1px solid #999;
+        border-radius   : 50%;
+        display         : flex;
+        align-items     : center;
+        justify-content : center;
+        cursor          : pointer;
+        transition      : background-color 0.3s ease;
+        opacity         : 0.6;
 
         i {
           font-size: 1rem;
-        }
-      }
-    }
-
-    .banner-center {
-      width: 11.52rem;
-      height: 3.125rem;
-    }
-
-    .banner-right {
-      width: 30%;
-      margin-right: 0;
-      justify-content: flex-start;
-
-      .right {
-        gap: 0.4rem;
-        i {
-          font-size: 1rem;
-        }
-
-        p {
-          font-size: 1rem;
+          color    : #999;
         }
       }
     }
   }
-}
 
+  .center {
+    .banner-center {
+      flex      : 1;
+      text-align: center;
 
-
-@media (max-width: 767px) {
-  .banner-container {
-    height: 3rem;
-    padding: 0 0.3rem;
-
-    .banner-left {
-      width: 25%;
-      .menu-icon-circle {
-        margin-left: 0;
-        width: 2rem;
-        height: 2rem;
-
-        i {
-          font-size: 1rem;
-        }
+      .logo-img {
+        width              : 12rem;
+        height             : 4rem;
+        background-image   : url('../image/mono.png');
+        background-size    : contain;
+        background-repeat  : no-repeat;
+        background-position: center;
+        display            : inline-block;
       }
     }
+  }
 
-    .banner-center {
-      width: 9rem;
-      height: 2.5rem;
-    }
+  .benphai {
+    width          : 12.1875rem;
+    display        : flex;
+    justify-content: flex-end;
 
     .banner-right {
-      width: 35%;
-      margin-right: 0;
+      display    : flex;
+      align-items: center;
+      gap        : 1rem;
+      font-size  : 1rem;
 
       .right {
-        gap: 0.4rem;
+        display    : flex;
+        align-items: center;
+        gap        : 0.5rem;
 
         i {
-          font-size: 0.9rem;
+          font-size: 1.5rem;
+          color    : rgb(238, 158, 10);
         }
 
         p {
-          font-size: 0.8rem;
-          white-space: nowrap; 
+          margin   : 0;
+          font-size: 1rem;
+          color    : #000;
         }
+      }
+    }
+  }
+
+
+  @media (max-width: 48rem) {
+    .banner-container {
+      padding: 0 1rem;
+
+      .banner-group {
+        flex-direction: row;
+      }
+
+      .banner-right .right {
+        i {
+          font-size: 1.2rem;
+        }
+
+        p {
+          font-size: 0.875rem;
+        }
+      }
+
+      .banner-center .logo-img {
+        width : 10rem;
+        height: 3.5rem;
       }
     }
   }

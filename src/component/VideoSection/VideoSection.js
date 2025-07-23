@@ -4,7 +4,8 @@ import "../styles/VideoSection.scss";
 function VideoSection() {
   return (
     <div className="video-section">
-      <div className="video-container">
+      <div className="content">
+              <div className="video-container">
         <div className="video-wrapper">
           <h2 className="section-title"><p><span>VIDEO</span></p></h2>
           <div className="iframe-wrapper">
@@ -31,8 +32,6 @@ function VideoSection() {
           </div>
         </div>
       </div>
-
-      {/* GRID 3 VIDEO NHỎ */}
       <div className="video-grid-section">
         <h2 className="section-title">Bản tin tài chính kinh doanh VTV1</h2>
         <div className="video-grid">
@@ -78,6 +77,7 @@ function VideoSection() {
             </p>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

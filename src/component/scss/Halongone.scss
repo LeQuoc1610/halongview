@@ -1,39 +1,75 @@
-.halong-title {
-    color: #f5a623;
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 1rem;
-    margin-top: 2rem;
-}
+.section-content {
+  padding: 2.5rem 1.25rem;
 
-.halong-desc {
-  font-size: 1rem;
-  line-height: 1.8;
-  color: #333;
-  text-align: justify;
-  font-family: "Quicksand", sans-serif;
-}
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 
-.halong-link {
-  margin-top: 1rem;
-  font-style: italic;
-  color: #003366;
-  font-weight: 600;
-  cursor: pointer;
-}
+    max-width: 65.5rem; 
+    margin: 0 auto;   
 
-.halong-image {
-  background: url('../image/hạ-long-bay-view-fix.jpg') no-repeat center center;
-  background-size: cover;
-  height: 27rem;
-  border-radius: 0 !important;
-}
+    .col {
+      box-sizing: border-box;
+      padding: 0.625rem;
 
-@media (min-width: 768px) {
-    .col-md-6 {
-        flex: 0 0 auto;
-        padding: 4rem;
+      &.medium-6,
+      &.large-6,
+      &.small-12 {
+        width: 100%;
+
+        @media (min-width: 48rem) {
+          width: 50%;
+        }
+      }
+
+      .col-inner {
+        height: 26.0438rem;
+        padding: 0 0.9375rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .section-title-container {
+        margin-bottom: 1.25rem;
+
+        .section-title {
+          font-weight: bold;
+          display: flex;
+          
+
+          .section-title-main {
+            font-size: 1.4rem;
+            color: #ee9e0a;
+            text-align: left;
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1.7;
+      }
+
+      .gallery-box {
+        height: 25.7813rem;
+
+        .image-background {
+          width: 100%;
+          height: 23.9063rem;
+          background-image: url('../image/hạ-long-bay-view-fix.jpg');
+          background-size: cover;
+          background-position: center;
+          transition: transform 0.3s ease;
+
+          &:hover {
+            transform: scale(1.03);
+          }
+        }
+      }
     }
+  }
 }

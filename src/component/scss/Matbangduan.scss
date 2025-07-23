@@ -12,6 +12,12 @@
     margin: 0 auto;
     padding: 2.5rem 1.25rem;
     font-family: Arial, sans-serif;
+
+    .matbang-wrapper {
+      width: 100%;
+      max-width: 63.5rem;
+      margin: 0 auto;
+    }
   }
 
   .matbang-main-title {
@@ -46,7 +52,6 @@
     margin-bottom: 1.9rem;
     flex-wrap: wrap;
     font-size: small;
-    transform: scale(0.96);
   }
 
   .tab-item {
@@ -106,7 +111,7 @@
   }
 
   .matbang-image-display {
-    width: 100%;
+    width: 63.5rem;
     height: auto;
     max-height: 50rem;
     background-repeat: no-repeat;

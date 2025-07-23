@@ -60,13 +60,13 @@ const newsData = [
 export default function NewsSlider() {
   return (
     <div className="news-slider-container">
-      <div className="title-wrapper">
+      <div className="content">
+          <div className="title-wrapper">
         <b className="line" />
         <span className="title">TIN TỨC TỪ CHỦ ĐẦU TƯ</span>
         <b className="line" />
       </div>
-
-      <Swiper
+       <Swiper
         modules={[Navigation]}
         loop={true}       
         spaceBetween={24}
@@ -100,6 +100,7 @@ export default function NewsSlider() {
           </SwiperSlide>
         ))}
       </Swiper>
+      </div>
     </div>
   );
 }

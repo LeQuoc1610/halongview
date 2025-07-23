@@ -1,158 +1,143 @@
 .canho-mau-container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 10px auto 40px auto;
-  padding: 20px;
+  width           : 69.5rem;
+  margin          : 2rem auto 4rem auto;
+  padding         : 0 1rem;
   background-color: #fff;
-  text-align: center;
+  font-family     : Arial, sans-serif;
 
-  .canho-main-title {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-    color: rgb(238, 158, 10);
-    text-transform: uppercase;
-    margin-bottom: 30px;
-    padding-bottom: 10px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+  .canho-wrapper-fixed-width {
+    width : 63.5rem;
+    margin: 0 auto;
 
-    &::before,
-    &::after {
-      content: "";
-      flex: 1;
-      max-width: 475px;
-      height: 1px;
-      background-color: rgb(28, 28, 28);
-      opacity: 0.1;
-    }
-  }
+    .canho-main-title {
+      font-size      : 2rem;
+      font-weight    : 700;
+      text-transform : uppercase;
+      color          : #ee9e0a;
+      margin-bottom  : 2.5rem;
+      text-align     : center;
+      position       : relative;
+      display        : flex;
+      align-items    : center;
+      justify-content: center;
+      gap            : 1rem;
 
-  .canho-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-  }
-
-  .canho-img {
-    width: 100%;
-    max-width: 300px;
-    border: 1px solid #ddd;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-
-    img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      display: block;
+      &::before,
+      &::after {
+        content         : "";
+        flex            : 1;
+        height          : 1px;
+        background-color: #1c1c1c;
+        opacity         : 0.15;
+        max-width       : 475px;
+      }
     }
 
-    h3 {
-      margin: 10px 0;
-      font-weight: bold;
-      font-size: 1.1rem;
+    .canho-wrapper {
+      display        : flex;
+      flex-wrap      : nowrap;
+      justify-content: center;
+      gap            : 2rem;
     }
 
-    &:hover {
-      transform: scale(1.02);
+    .canho-img {
+      width     : 100%;
+      max-width : 320px;
+      border    : 1px solid #ddd;
+      transition: transform 0.3s ease;
+      overflow  : hidden;
+      background: #fafafa;
+      cursor    : pointer;
+
+      img {
+        width     : 100%;
+        height    : 200px;
+        object-fit: cover;
+        display   : block;
+      }
+      &:hover {
+        transform : scale(1.02);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
     }
+
+
   }
 
   .canho-modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+    position        : fixed;
+    inset           : 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    z-index         : 999;
   }
 
   .canho-modal-content {
-    position: relative;
-    background-color: #fff;
-    padding: 20px;
-    max-width: 90%;
-    max-height: 90%;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    background   : #fff;
+    padding      : 1.5rem;
+    max-width    : 95%;
+    max-height   : 90%;
+    overflow     : hidden;
+    position     : relative;
+    box-shadow   : 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
   }
 
   .canho-modal-close {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    color: #aaa;
-    font-size: 2rem;
+    position   : absolute;
+    top        : 0.75rem;
+    right      : 1rem;
+    font-size  : 2rem;
+    color      : #aaa;
     font-weight: bold;
-    cursor: pointer;
+    cursor     : pointer;
 
-    &:hover,
-    &:focus {
+    &:hover {
       color: #333;
     }
   }
 
   .canho-modal-img {
-    max-width: 100%;
+    max-width : 100%;
     max-height: 80vh;
-    display: block;
-    margin: 0 auto;
     object-fit: contain;
+    display   : block;
+    margin    : 0 auto;
   }
 
+  // RESPONSIVE
   @media (max-width: 1024px) {
-    .canho-main-title {
-      font-size: 2rem;
-    }
-
     .canho-img {
       max-width: 45%;
     }
   }
 
   @media (max-width: 768px) {
-    .canho-main-title {
-      font-size: 1.75rem;
-    }
-
     .canho-wrapper {
       flex-direction: column;
-      align-items: center;
+      align-items   : center;
     }
 
     .canho-img {
       max-width: 90%;
     }
+
+    .canho-main-title {
+      font-size: 1.6rem;
+    }
   }
 
   @media (max-width: 480px) {
     .canho-main-title {
-      font-size: 1.5rem;
       flex-direction: column;
+      font-size     : 1.4rem;
 
       &::before,
       &::after {
         display: none;
       }
-    }
-
-    .canho-modal-content {
-      padding: 10px;
-    }
-
-    .canho-modal-close {
-      font-size: 1.5rem;
-      right: 10px;
     }
 
     .canho-img img {
@@ -161,6 +146,15 @@
 
     .canho-img h3 {
       font-size: 1rem;
+    }
+
+    .canho-modal-content {
+      padding: 1rem;
+    }
+
+    .canho-modal-close {
+      font-size: 1.5rem;
+      right    : 0.75rem;
     }
   }
 }

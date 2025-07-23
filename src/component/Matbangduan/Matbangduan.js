@@ -59,33 +59,37 @@ class Matbangduan extends Component {
     return (
       <div className="matbangcontent">
         <div className="matbang-section">
-          <h1 className="matbang-main-title">MẶT BẰNG DỰ ÁN</h1>
+          <div className="matbang-wrapper">
+            <h1 className="matbang-main-title">MẶT BẰNG DỰ ÁN</h1>
 
-          <div className="matbang-tabs-nav">
-            {Object.keys(this.tabData).map((tabName) => (
-              <div
-                key={tabName}
-                className={`tab-item ${activeTab === tabName ? "active" : ""}`}
-                onClick={() => this.handleTabClick(tabName)}
-              >
-                {this.tabData[tabName].displayName}
-              </div>
-            ))}
-          </div>
+            <div className="matbang-tabs-nav">
+              {Object.keys(this.tabData).map((tabName) => (
+                <div
+                  key={tabName}
+                  className={`tab-item ${
+                    activeTab === tabName ? "active" : ""
+                  }`}
+                  onClick={() => this.handleTabClick(tabName)}
+                >
+                  {this.tabData[tabName].displayName}
+                </div>
+              ))}
+            </div>
 
-          <div className="matbang-content-wrapper">
-            <div className="matbang-center-image">
-              <div className="matbang-image-display">
-                {currentData.mainImage && (
-                  <img
-                    src={currentData.mainImage}
-                    alt={currentData.title}
-                    onClick={() => this.openModal(currentData.mainImage)}
-                  />
-                )}
+            <div className="matbang-content-wrapper">
+              <div className="matbang-center-image">
+                <div className="matbang-image-display">
+                  {currentData.mainImage && (
+                    <img
+                      src={currentData.mainImage}
+                      alt={currentData.title}
+                      onClick={() => this.openModal(currentData.mainImage)}
+                    />
+                  )}
+                </div>
               </div>
             </div>
-          </div>
+          </div>{" "}
         </div>
 
         {isModalOpen && (
